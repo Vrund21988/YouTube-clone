@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo"> MiniYouTubeV</div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+            <button>🔍</button>
+        </div>
+
+        <div class="header-icons">
+            🎤
+            🔔
+            👤
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+
+            <a href="#" onclick="showPage('home')">🏠 Home</a>
+            <a href="#" onclick="showPage('trending')">🔥 Trending</a>
+            <a href="#" onclick="showPage('videos')">🎬 Videos</a>
+            <a href="#" onclick="showPage('shorts')">⚡ Shorts</a>
+            <a href="#">📺 Subscriptions</a>
+
+            <hr>
+
+            <h3>You</h3>
+
+            <a href="#">📜 History</a>
+            <a href="#">▶ Your videos</a>
+            <a href="#">⏰ Watch later</a>
+            <a href="#">👍 Liked videos</a>
+
+        </aside>
+
+        <main class="content" id="app">
+
+            <div class="category-buttons">
+                <button>All</button>
+                <button>Music</button>
+                <button>Gaming</button>
+                <button>News</button>
+                <button>Live</button>
+                <button>Sports</button>
+                <button>Technology</button>
+            </div>
+
+            <h2>Recommended Videos</h2>
+
+            <div class="video-grid">
+
+                <div class="video-card" onclick="playVideo('dQw4w9WgXcQ')">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Video">
+                    </div>
+
+                    <h3>Never Gonna Give You Up</h3>
+                    <p>Rick Astley</p>
+                    <span>1M views • 2 days ago</span>
+                </div>
+
+                <div class="video-card" onclick="playVideo('9bZkp7q19f0')">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg" alt="Video">
+                    </div>
+
+                    <h3>Popular YouTube Video</h3>
+                    <p>YouTube Channel</p>
+                    <span>500K views • 1 day ago</span>
+                </div>
+
+                <div class="video-card" onclick="playVideo('kJQP7kiw5Fk')">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/kJQP7kiw5Fk/hqdefault.jpg" alt="Video">
+                    </div>
+
+                    <h3>Popular Music Video</h3>
+                    <p>Music Channel</p>
+                    <span>10M views • 5 days ago</span>
+                </div>
+
+                <div class="video-card" onclick="playVideo('3JZ_D3ELwOQ')">
+                    <div class="thumbnail">
+                        <img src="https://i.ytimg.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" alt="Video">
+                    </div>
+
+                    <h3>Trending Video</h3>
+                    <p>Entertainment</p>
+                    <span>2M views • 3 days ago</span>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

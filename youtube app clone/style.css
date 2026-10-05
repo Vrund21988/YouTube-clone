@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #0f0f0f;
+}
+
+/* Header */
+
+.header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: red;
+    width: 200px;
+}
+
+.search-box {
+    display: flex;
+    width: 50%;
+    height: 42px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 18px;
+    border: 1px solid #ccc;
+    border-radius: 22px 0 0 22px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box button {
+    width: 60px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 22px 22px 0;
+    background: #f8f8f8;
+    cursor: pointer;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+/* Layout */
+
+.layout {
+    display: flex;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 220px;
+    min-height: calc(100vh - 65px);
+    padding: 20px 12px;
+    position: fixed;
+    left: 0;
+    top: 65px;
+    background: white;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #0f0f0f;
+    padding: 13px 15px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.sidebar a:hover {
+    background: #f2f2f2;
+}
+
+.sidebar hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+.sidebar h3 {
+    padding: 10px 15px;
+}
+
+/* Content */
+
+.content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    padding: 20px 25px;
+}
+
+/* Categories */
+
+.category-buttons {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    margin-bottom: 25px;
+}
+
+.category-buttons button {
+    border: none;
+    background: #f2f2f2;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.category-buttons button:first-child {
+    background: #0f0f0f;
+    color: white;
+}
+
+/* Videos */
+
+.content h2 {
+    margin-bottom: 20px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px 18px;
+}
+
+.video-card {
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #ddd;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-card h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.video-card p {
+    color: #606060;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.video-card span {
+    color: #606060;
+    font-size: 13px;
+}
+
+/* Video Player */
+
+.player-container {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    margin-top: 20px;
+}
+
+.player-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.playing-title {
+    margin-top: 20px;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+    .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .sidebar a {
+        font-size: 0;
+        text-align: center;
+    }
+
+    .sidebar h3,
+    .sidebar hr {
+        display: none;
+    }
+
+    .content {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo {
+        width: auto;
+        font-size: 18px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 500px) {
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-icons {
+        display: none;
+    }
+
+    .search-box {
+        width: 55%;
+    }
+}
+.back-button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #f2f2f2;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.back-button:hover {
+    background: #ddd;
+}
